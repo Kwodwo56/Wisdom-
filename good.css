@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffd180;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 460px;
+    padding: 2.5rem;
+    background: rgba(31, 42, 58, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 0 40px #ffab40cc;
+    animation: fadeSlideUp 1.3s ease forwards;
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.error-code {
+    font-size: 12rem;
+    font-weight: 900;
+    color: #f48fb1;
+    text-shadow:
+        0 0 10px #ff80abbb,
+        0 0 20px #f48fb1aa,
+        0 0 30px #ff80ab99;
+    animation: neonPulse 3s ease-in-out infinite alternate, bounce 2s ease infinite;
+    user-select: none;
+}
+
+.message h1 {
+    font-size: 2rem;
+    color: #ffab40;
+    margin: 1rem 0 1rem 0;
+    text-shadow: 0 0 15px #ffab40cc;
+    animation: glowText 3.5s ease-in-out infinite alternate;
+}
+
+.message p {
+    font-size: 1.15rem;
+    margin-bottom: 1.6rem;
+    line-height: 1.5;
+    color: #ffe3b3;
+}
+
+.home-link {
+    display: inline-block;
+    font-weight: 700;
+    background: #ffab40;
+    color: #203a43;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    box-shadow: 0 0 30px #ffab40bb;
+    text-decoration: none;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    user-select: none;
+}
+
+.home-link:hover,
+.home-link:focus {
+    background: #f48fb1;
+    box-shadow: 0 0 40px #f48fb1cc;
+    outline: none;
+    color: #fff;
+}
+
+.funny-robot {
+    font-size: 6rem;
+    margin-top: 1.8rem;
+    user-select: none;
+    animation: swing 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px #f48fb1cc);
+}
+
+/* Animations */
+@keyframes neonPulse {
+    0% {
+        text-shadow:
+            0 0 5px #f48fb1aa,
+            0 0 10px #ff80abbb,
+            0 0 15px #f48fb1cc,
+            0 0 20px #ff80abdd;
+        color: #f48fb1;
+    }
+    100% {
+        text-shadow:
+            0 0 20px #ff80abdd,
+            0 0 30px #f48fb1ee,
+            0 0 40px #ff80abff,
+            0 0 50px #f48fb1ff;
+        color: #ff80ab;
+    }
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 7px #ffab40aa;
+    }
+    100% {
+        text-shadow: 0 0 22px #f48fb1dd;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-28px);
+    }
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(-25deg);
+    }
+    50% {
+        transform: rotate(25deg);
+    }
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

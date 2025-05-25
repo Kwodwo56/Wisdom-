@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kelvin Gyimah | LHORD WISE Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Style audio controls to match portfolio colors */
+  audio#bg-music {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 9999;
+    width: 270px;
+    border-radius: 10px;
+    background: rgba(20, 20, 40, 0.85);
+    box-shadow: 0 0 20px #00e5ffcc;
+  }
+  audio#bg-music::-webkit-media-controls-panel {
+    background: rgba(20, 20, 40, 0.9);
+    border-radius: 10px;
+  }
+  audio#bg-music::-webkit-media-controls-play-button,
+  audio#bg-music::-webkit-media-controls-volume-slider {
+    filter: invert(65%) sepia(100%) saturate(1000%) hue-rotate(130deg) brightness(97%) contrast(85%);
+  }
+  audio#bg-music:hover,
+  audio#bg-music:focus {
+    box-shadow: 0 0 35px #ff77a9cc;
+    outline: none;
+  }
+</style>
+</head>
+<body>
+  <!-- Background music -->
+  <audio autoplay loop muted id="bg-music" controls>
+    <source src="song.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+<header>
+    <h1>Kelvin Gyimah</h1>
+    <p>aka <span class="highlight">LHORD WISE</span> - Wise Behavior Enthusiast &amp; Tech Lover</p>
+</header>
+<nav>
+    <a href="#profile-pic-container" aria-label="Go to Profile picture">Profile</a>
+    <a href="#about" aria-label="Go to About section">About</a>
+    <a href="#skills" aria-label="Go to Skills section">Skills</a>
+    <a href="#education" aria-label="Go to Education section">Education</a>
+    <a href="#interests" aria-label="Go to Interests section">Interests</a>
+    <a href="#projects" aria-label="Go to Projects section">Projects</a>
+    <a href="#contact" aria-label="Go to Contact section">Contact</a>
+</nav>
+<main>
+    <div id="profile-pic-container" tabindex="0" aria-label="Kelvin Gyimah profile picture">
+        <img id="profile-pic" src="mypic.jpg" alt="Profile picture of Kelvin Gyimah" />
+    </div>
+    <section id="about" aria-label="About Kelvin Gyimah">
+        <h2>About Me</h2>
+        <p>Hi, I’m <strong>Kelvin Gyimah</strong>, often called <span class="highlight">LHORD WISE</span> for my wise behavior. I am 17 years old and recently completed my Senior High School education at <strong>Adawomase Senior High School</strong>. I have a deep passion for technology and I am specializing in programming, ethical hacking, and artificial intelligence.</p>
+        <p>I have learned <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> and continuously strive to expand my knowledge in tech fields that fascinate me.</p>
+    </section>
+    <section id="skills" aria-label="Skills Kelvin has learned">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+            <li>
+                HTML
+                <div class="skill-bar skill-html" aria-label="85% proficiency in HTML">
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                CSS
+                <div class="skill-bar skill-css" aria-label="75% proficiency in CSS">
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                JavaScript
+                <div class="skill-bar skill-js" aria-label="65% proficiency in JavaScript">
+                    <span></span>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section id="education" aria-label="Education details of Kelvin Gyimah">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Adawomase Senior High School</strong> - Completed Senior High education.</li>
+            <li>Studied foundational programming and markup languages: HTML, CSS, JavaScript.</li>
+            <li>Plan to expand knowledge in programming languages, ethical hacking techniques, and AI development.</li>
+        </ul>
+    </section>
+    <section id="interests" aria-label="Kelvin Gyimah's Interests">
+        <h2>Interests &amp; Goals</h2>
+        <p>Technology drives me towards continuous learning, especially in programming, ethical hacking, and artificial intelligence. I am fascinated by security aspects of computing, learning how to protect systems and data from threats and vulnerabilities.</p>
+        <p>Becoming a skilled programmer and ethical hacker is my immediate goal, alongside mastering AI applications that can improve lives and industries.</p>
+    </section>
+    <section id="projects" aria-label="Portfolio Projects">
+        <h2>Projects</h2>
+        <article>
+            <h3>Personal Portfolio Website</h3>
+            <p>This website showcases who I am, my skills, education, interests, and provides ways to contact me.</p>
+        </article>
+        <article>
+            <h3>Interactive Web Development</h3>
+            <p>Developed several small interactive web projects using HTML, CSS, JavaScript to improve my programming skills.</p>
+        </article>
+        <article>
+            <h3>Learning Ethical Hacking</h3>
+            <p>Currently exploring foundational ethical hacking tools and techniques through online courses and labs.</p>
+        </article>
+    </section>
+    <section id="contact" aria-label="Contact Kelvin Gyimah">
+        <h2>Contact Me</h2>
+        <p>If you want to reach out, here are my contact details:</p>
+        <address>
+            <p><strong>Phone:</strong> <a href="tel:+233536985692">+233 536 985 692</a></p>
+            <p><strong>Email:</strong> <a href="mailto:kelvingyimah2007@gmail.com">kelvingyimah2007@gmail.com</a></p>
+        </address>
+    </section>
+</main>
+<footer aria-label="Footer with background photo and copyright">
+    &copy; 2025 Kelvin Gyimah | LHORD WISE. All rights reserved.
+</footer>
+<script>
+    // Animate sections fade in onscroll
+    document.addEventListener('DOMContentLoaded', () => {
+        const elementsToAnimate = document.querySelectorAll('main section, #profile-pic-container');
+        const config = {
+            rootMargin: '0px 0px -100px 0px',
+            threshold: 0
+        };
+        let observer = new IntersectionObserver(function(entries, self) {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                    self.unobserve(entry.target);
+                }
+            });
+        }, config);
+
+        elementsToAnimate.forEach(elem => {
+            observer.observe(elem);
+        });
+    });
+</script>
+</body>
+</html>
